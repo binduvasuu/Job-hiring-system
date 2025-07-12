@@ -1,0 +1,25 @@
+body {
+  font-family: Arial;
+  padding: 20px;
+  background: #f4f4f4;
+}
+
+input, textarea, button {
+  display: block;
+  margin: 10px 0;
+  padding: 10px;
+  width: 100%;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+}
+
+.job-card {
+  background: white;
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 5px;
+}

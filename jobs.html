@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jobs</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <h2>All Jobs</h2>
+  {% for job in jobs %}
+    <div class="job-card">
+      <h3>{{ job.title }}</h3>
+      <p><b>{{ job.company }}</b> - {{ job.location }}</p>
+      <p>{{ job.desc }}</p>
+      <a href="/apply"><button>Apply</button></a>
+      
+      <form action="/delete-job/{{ job.id }}" method="POST" style="display:inline;">
+        <button type="submit" onclick="return confirm('Are you sure?')">Delete</button>
+      </form>
+
+    </div>
+  {% endfor %}
+</body>
+</html>
